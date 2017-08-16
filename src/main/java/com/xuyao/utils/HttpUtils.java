@@ -17,12 +17,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by xuyao on 2017/6/7.
- */
 public class HttpUtils {
     private static HttpClient httpClient = HttpClientBuilder.create().build();
 
+    /**
+     * post请求
+     * @param url
+     * @param map
+     * @param charset
+     * @return
+     */
     public static String doPost(String url, Map<String, String> map, String charset) {
         HttpPost httpPost = new HttpPost(url);
         List<NameValuePair> list = new ArrayList<NameValuePair>();
@@ -48,6 +52,13 @@ public class HttpUtils {
         return result;
     }
 
+    /**
+     * get请求
+     * @param url
+     * @param map
+     * @param charset
+     * @return
+     */
     public static String doGet(String url, Map<String, String> map, String charset) {
         StringBuilder builder = new StringBuilder(url).append("?");
         for (Map.Entry<String, String> e : map.entrySet()) {

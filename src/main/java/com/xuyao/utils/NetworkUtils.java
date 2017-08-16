@@ -8,6 +8,13 @@ import java.net.UnknownHostException;
 
 public class NetworkUtils {
 
+	/**
+	 * 指定ip、port是否可连接，等同于telnet
+	 * @param host
+	 * @param port
+	 * @param timeout
+     * @return
+     */
 	public static boolean isHostConnectable(String host, int port, int timeout) {
 		Socket socket = new Socket();
 		try {
@@ -25,6 +32,12 @@ public class NetworkUtils {
 		return true;
 	}
 
+	/**
+	 * 指定ip是否可到达，等同于ping
+	 * @param host
+	 * @param timeout
+     * @return
+     */
 	public static boolean isHostReachable(String host, Integer timeout) {
 		try {
 			return InetAddress.getByName(host).isReachable(timeout);
