@@ -19,6 +19,13 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
+
+		<!--参数检验-->
+		<dependency>
+			<groupId>com.cookingfox</groupId>
+			<artifactId>guava-preconditions</artifactId>
+			<version>0.1.5</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>common</finalName>
