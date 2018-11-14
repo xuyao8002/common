@@ -1,12 +1,10 @@
 package com.xuyao.test;
 
-import java.util.Arrays;
-
 public class Test {
     public static void main(String[] args) throws InterruptedException {
         int[] nums = {9, 5, 2, 7, 8};
-        bubbleSort(nums);
-        Arrays.stream(nums).forEach(System.out::println);
+        otherSort(nums);
+//        Arrays.stream(nums).forEach(System.out::println);
     }
 
 
@@ -38,4 +36,16 @@ public class Test {
 
         }
     }
+    public static void otherSort(int[] nums){
+        int[] tmp = new int[10];
+        for (int i = 0; i < nums.length; i++) {
+            tmp[nums[i]]++;
+        }
+        for (int i = 0; i < tmp.length; i++) {
+            if(tmp[i] > 0){
+                System.out.println(i);
+            }
+        }
+    }
+
 }
