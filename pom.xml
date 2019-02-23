@@ -33,6 +33,12 @@
 			<version>3.7</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>25.0-jre</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>common</finalName>
