@@ -17,7 +17,6 @@ public class RateLimitAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RateLimitAspect.class);
 
-//    private RateLimiter rateLimiter = RateLimiter.create(5.0);
     private ConcurrentHashMap<String, RateLimiter> limiters = new ConcurrentHashMap<>();
 
 //    @Pointcut("@annotation(com.xuyao.annotation.RateLimitAspect)")
